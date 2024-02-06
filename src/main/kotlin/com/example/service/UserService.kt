@@ -31,7 +31,4 @@ class UserService() {
         }
     }
 
-    fun removeUser(nome: String){
-        users.removeIf{it.nome== nome}
-    }
 }

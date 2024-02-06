@@ -56,7 +56,7 @@ fun Route.UserRoute(){
 
            val  nome= call.parameters["nome"]?: return@delete call.respond(HttpStatusCode.BadRequest, "parametro nullo")
 
-           //userService.removeUser(nome)
+
            if (userService.users.removeIf { it.nome==nome }){
                call.respond(HttpStatusCode.Created,"user $nome foi deletado")
            }
